@@ -353,12 +353,7 @@
 				"duration"				"14.0 14.0 14.0"
 			}
 		}
-	
-	    "precache"
-	    {
-	        "particle" "particles/econ/items/sven/sven_warcry_ti5/sven_warcry_armor_buff_model_glow_b_ti_5.vpcf"
-	    }
-	
+		
 		"OnSpellStart"
 		{
 			"ApplyModifier"
@@ -377,8 +372,7 @@
 				"IsHidden"			"0"
 				"IsDebuff"			"0"
 			
-				"EffectName"	"particles/econ/items/sven/sven_warcry_ti5/sven_warcry_armor_buff_model_glow_b_ti_5.vpcf"
-				"EffectAttachType"	"follow_origin"
+	
 				
 				"Properties"
 				{
