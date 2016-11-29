@@ -1,4 +1,4 @@
-"npc_dota_hero_juggernaut"
+"starter_peasant"
     {
         "override_hero"             "npc_dota_hero_juggernaut"
         "Model"                     "models/peasant.vmdl"
@@ -19,6 +19,8 @@
         "VisionDaytimeRange"        "1200"
         "VisionNighttimeRange"      "700"
 
+        //Abilities
+        "Ability1"                  "peasants_wrath"
         
     }
 

@@ -1,15 +1,70 @@
-"PeasantsWrath"
+"peasants_wrath"
 {
 
 
 	//General
    	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"ursa_enrage"
-	"MaxLevel" 						"1"
+	"MaxLevel" 						"3"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 	"IsCastableWhileHidden"			"1"
 
+	
+	"AbilityCooldown"				"10.0"
+	"AbilityManaCost"				"1"
+	"Duration"			"6.0"
+	
 
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"60 90 120"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attackspeed_pct"			"60 80 100"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"14.0 14.0 14.0"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_peasants_wrath"
+			"Target" 		"CASTER"
+			"Duration"		"%duration"
+		}
+	}
 
+	"Modifiers"
+	{
+		"modifier_peasants_wrath"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"0"
+		
+
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed_pct"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%movespeed_pct" 
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+
+			}	
+			
+		}
+	}
+
+	
 }
