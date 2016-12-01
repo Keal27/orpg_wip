@@ -32,6 +32,7 @@ function Precache( context )
 
   -- Sounds can precached here like anything else
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts", context)
+  PrecacheResource("soundfile", "sounds/vo/axe/axe_ability_berserk_06.vsnd", context)
 
   -- Entire items can be precached by name
   -- Abilities can also be precached in this way despite the name

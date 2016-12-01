@@ -11,10 +11,17 @@
 	"IsCastableWhileHidden"			"1"
 
 	
-	"AbilityCooldown"				"10.0"
-	"AbilityManaCost"				"1"
-	"Duration"			"6.0"
+	"AbilityCooldown"				"12.0"
+	"AbilityManaCost"				"100"
 	
+	
+		
+		"precache"
+	{
+		"soundfile"			"soundevents/voscripts/game_sounds_vo_axe.vsndevts"
+		"particle"  		"particles/econ/items/ursa/ursa_fierce_heart/ursa_fierce_heart_ambient.vpcf"
+	}
+
 
 	"AbilitySpecial"
 	{
@@ -31,12 +38,24 @@
 		"03"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"duration"				"14.0 14.0 14.0"
+			"duration"				"7.0 7.0 7.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"move_speed"			"15	15 15"
 		}
 	}
 	
 	"OnSpellStart"
 	{
+			"FireSound"
+		{
+			"EffectName"	"axe_axe_ability_berserk_06"
+			"Target" 		"CASTER"
+		}
+
+	
 		"ApplyModifier"
 		{
 			"ModifierName"	"modifier_peasants_wrath"
@@ -53,12 +72,13 @@
 			"IsHidden"			"0"
 			"IsDebuff"			"0"
 		
-
+			"EffectName"        "particles/econ/items/ursa/ursa_fierce_heart/ursa_fierce_heart_dark_l.vpcf"
+			"EffectAttachType"  "follow_origin"
 			
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed_pct"
-				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%movespeed_pct" 
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed_percentage"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%move_speed" 
 				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
 
 			}	
