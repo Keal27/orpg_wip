@@ -18,9 +18,9 @@
 		"DOTA_Tooltip_ability_example_ability_Description"				"Detonator channels a charge and releases an explosion around the caster if the channel is successful, dealing damage and knocking back all enemies in range of the explosion"
 		"DOTA_Tooltip_ability_example_ability_Lore"								""
 		"DOTA_Tooltip_ability_example_ability_duration"							"DURATION:"
-    	"DOTA_Tooltip_ability_example_ability_radius"							"RADIUS:"
-   		"DOTA_Tooltip_ability_example_ability_distance"							"KNOCKBACK DISTANCE:"
-    	"DOTA_Tooltip_ability_example_ability_height"							"KNOCKBACK HEIGHT:"
+    "DOTA_Tooltip_ability_example_ability_radius"							"RADIUS:"
+    "DOTA_Tooltip_ability_example_ability_distance"							"KNOCKBACK DISTANCE:"
+    "DOTA_Tooltip_ability_example_ability_height"							"KNOCKBACK HEIGHT:"
 		
 		"DOTA_Tooltip_ability_peasants_wrath"                                             "Peasants Wrath"
 		"DOTA_Tooltip_ability_peasants_wrath_Description"                                 "Gives caster increased movespeed, attack speed, and increased damage."

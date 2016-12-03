@@ -4,7 +4,7 @@
 
 	//General
    	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"ursa_enrage"
+	"AbilityTextureName"			"peasants_wrath"
 	"MaxLevel" 						"3"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
@@ -19,7 +19,8 @@
 		"precache"
 	{
 		"soundfile"			"soundevents/voscripts/game_sounds_vo_axe.vsndevts"
-		"particle"  		"particles/econ/items/ursa/ursa_fierce_heart/ursa_fierce_heart_ambient.vpcf"
+		"particle"  		"particles/dire_fx/bad_ancient_glow.vpcf"
+		"particle"  		"particles/dire_fx/bad_ancient_flow_test.vpcf"
 	}
 
 
@@ -55,7 +56,8 @@
 			"Target" 		"CASTER"
 		}
 
-	
+		
+
 		"ApplyModifier"
 		{
 			"ModifierName"	"modifier_peasants_wrath"
@@ -71,10 +73,20 @@
 			"Passive"			"0"
 			"IsHidden"			"0"
 			"IsDebuff"			"0"
-		
-			"EffectName"        "particles/econ/items/ursa/ursa_fierce_heart/ursa_fierce_heart_dark_l.vpcf"
-			"EffectAttachType"  "follow_origin"
 			
+
+		"OnCreated"
+    	{
+       		"AttachEffect"
+        	{
+            "EffectName" "particles/dire_fx/bad_ancient_glow.vpcf"
+            "EffectAttachType" "follow_origin"
+            "Target" "TARGET"
+       		}	
+			  
+			    	  	
+    	}
+
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed_percentage"

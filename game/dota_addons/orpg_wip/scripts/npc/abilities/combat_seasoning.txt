@@ -1,0 +1,54 @@
+"combat_seasoning"
+{
+
+
+	//General
+   	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"stats"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel" 						"5"
+	"LevelsBetweenUpgrades" 		"0"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"str"					"2 4 6 8 10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"agi"					"2 4 6 8 10"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"int"					"2 4 6 8 10"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"2 4 6 8 10"
+		}
+	}
+	"Modifiers"
+	{
+		"modifier_name"
+		{
+			"Passive"			"1"
+			"IsHidden"			"0"
+			"IsDebuff"			"0"
+			"IsBuff"			"1"
+			
+		"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%str" 
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%agi"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%damage"
+			}	
+	
+		}
+	}
+}

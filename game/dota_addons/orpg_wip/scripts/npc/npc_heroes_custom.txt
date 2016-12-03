@@ -79,7 +79,9 @@
 	
 	        //Abilities
 	        "Ability1"                  "peasants_wrath"
-	        
+	        "Ability2"                  "combat_seasoning"
+	        "Ability3"                  ""
+	        "Ability4"                  ""
 	    }
 	
 }
